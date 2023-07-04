@@ -1,0 +1,81 @@
+.advise {
+    background: var(--DarkGrayishBlue);
+    max-width: 500px;
+    width: 100%;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+    border-radius: 2rem;
+    padding: 2em;
+    position: relative;
+    h2 {
+        font-size: 1.5rem;
+        letter-spacing: 3px;
+        color: var(--NeonGreen);
+        margin-bottom: 1.5em;
+    }
+    .loader {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1em 0;
+    }
+    p {
+        padding-bottom: 2em;
+    }
+    .divider {
+        margin-bottom: .5em;
+    }
+    .desktop {
+        @media screen and (max-width: 900px) {
+            display: none;
+        }
+    }
+    .mobile {
+        display: none;
+        @media screen and (max-width: 900px) {
+            display: block;
+        }
+    }
+    .dice {
+        position: absolute;
+        width: clamp(32px, 15vw ,80px);
+        height: clamp(32px, 15vw ,80px);
+        padding: clamp(.1em, 5vw, .8em);
+        background: var(--NeonGreen);
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+        bottom: clamp(-1.6em, -5vw, -40em);
+        -webkit-transition: all .3s ease-in;
+        -moz-transition: all .3s ease-in;
+        -ms-transition: all .3s ease-in;
+        -o-transition: all .3s ease-in;
+        transition: all .3s ease-in;
+        &:hover {
+            background: radial-gradient(var(--NeonGreen), var(--GrayishBlue));
+            box-shadow: 0 0 40px 0 var(--GrayishBlue);
+            img {
+                -webkit-transform: scale(-.8);
+                -moz-transform: scale(-.8);
+                -ms-transform: scale(-.8);
+                -o-transform: scale(-.8);
+                transform: scale(-.8);
+            }
+        }
+    }
+}

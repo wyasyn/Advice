@@ -1,9 +1,10 @@
 import './App.scss';
+import Advise from './components/Advise/Advise';
 
 function App() {
   return (
     <div className="App">
-        App
+        <Advise />
     </div>
   );
 }
